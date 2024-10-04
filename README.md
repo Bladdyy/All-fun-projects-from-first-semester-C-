@@ -276,3 +276,38 @@ Zawartość okna jest przedstawiona za pomocą WIERSZE wierszy, z których każd
 Znak w wierszu zawartości okna określa stan komórki. Komórka żywa jest reprezentowana przez znak '0' (zero) a komórka martwa jest reprezentowana przez znak . (kropka).
 
 # Forth assignment
+
+### Wprowadzenie
+Kompresją drzewa nazywamy przekształcenie go w skierowany graf acykliczny (DAG) przez połączenie wszystkich wystąpień powtarzających się niepustych poddrzew.
+
+Dekompresją drzewa nazywamy przekształcenie odwrotne do kompresji drzewa.
+
+### Polecenie
+Napisz program umożliwiający kompresję i dekompresję drzewa binarnego dodatnich liczb całkowitych.
+
+* Program wywołany z argumentem c czyta z wejścia reprezentację drzewa i pisze na wyjście reprezentację grafu będącego wynikiem kompresji tego drzewa.
+
+* Program wywołany z argumentem d czyta z wejścia reprezentację grafu będącego wynikiem kompresji drzewa i pisze na wyjście reprezentację drzewa, z kompresji którego ten graf powstał.
+
+### Reprezentacja drzewa
+Puste drzewo jest reprezentowane przez wiersz z liczbą 0.
+
+Drzewo niepuste jest reprezentowane przez ciąg wierszy, z których pierwszy reprezentuje korzeń i zawiera jego wartość, w kolejnych wierszach jest reprezentacja lewego poddrzewa a po niej jest reprezentacja prawego poddrzewa.
+
+### Reprezentacja grafu
+Reprezentacja grafu, będącego wynikiem kompresji drzewa, powstaje z reprezentacji drzewa przez zastąpienie drugiego i każdego następnego wystąpienia ciągu wierszy reprezentujących takie samo niepuste poddrzewo jednym wierszem z liczbą -N. Wartość N to, liczony od 1 w reprezentacji grafu, numer kolejny wierzchołka, który jest korzeniem tego poddrzewa.
+
+### Przykłady
+Do treści zadania dołączone są pliki .in z przykładowymi danymi i pliki .out z wynikami wzorcowymi.
+
+* Dla danych przyklad1.in poprawny wynik programu wywołanego z argumentem c to przyklad1.out .
+
+* Dla danych przyklad1.out poprawny wynik programu wywołanego z argumentem d to przyklad1.in .
+
+* Dla danych przyklad2.in poprawny wynik programu wywołanego z argumentem c to przyklad2.out .
+
+* Dla danych przyklad2.out poprawny wynik programu wywołanego z argumentem d to przyklad2.in .
+
+* Dla danych przyklad3.in poprawny wynik programu wywołanego z argumentem c to przyklad3.out .
+
+* Dla danych przyklad3.out poprawny wynik programu wywołanego z argumentem d to przyklad3.in .
